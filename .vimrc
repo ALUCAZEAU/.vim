@@ -84,8 +84,8 @@ endif
 " Schémas de couleurs peaksea à télécharger ou alors opter pour desert
 " http://www.vim.org/scripts/script.php?script_id=760
 " ----------------------------------------------------------------------------------------------------
-"colorscheme peaksea
-colorscheme desert
+colorscheme peaksea
+"colorscheme desert
 
 " Définition de la police du GUI
 " ----------------------------------------------------------------------------------------------------
