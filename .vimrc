@@ -3,7 +3,7 @@
 " @file         .vimrc
 " @description  Fichier de configuration mini pour vim
 " @author       Alexandre LUCAZEAU
-" @version      11012010
+" @version      09092013
 "
 " ----------------------------------------------------------------------------------------------------
 "
