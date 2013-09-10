@@ -81,11 +81,9 @@ if ! has("gui_running")
 	set t_Co=256
 endif
 
-" Schémas de couleurs peaksea à télécharger ou alors opter pour desert
-" http://www.vim.org/scripts/script.php?script_id=760
+" Schémas de couleurs par defaut a desert
 " ----------------------------------------------------------------------------------------------------
-colorscheme peaksea
-"colorscheme desert
+colorscheme desert
 
 " Définition de la police du GUI
 " ----------------------------------------------------------------------------------------------------
@@ -252,6 +250,7 @@ Bundle 'gmarik/vundle'
 " peaksea => plugin couleur
 " ----------------------------------------------------------------------------------------------------
 Bundle 'peaksea'
+colorscheme peaksea
 
 " On active l'indentation automatique si les commandes automatiques sont activees
 " ----------------------------------------------------------------------------------------------------
