@@ -181,6 +181,19 @@ set nocp
 " ----------------------------------------------------------------------------------------------------
 set ts=4
 
+" indentation automatique
+" ----------------------------------------------------------------------------------------------------
+set smartindent
+
+" Nombre d'espace ajouter par >
+" ----------------------------------------------------------------------------------------------------
+set shiftwidth=4
+
+" Inserer des espaces lorsque l'on utilise la touche tabulation ou > - si
+" autoindent est activé
+" ----------------------------------------------------------------------------------------------------
+set expandtab
+
 " Remplace le bip par un flash d'écran lors d'erreurs 
 " ----------------------------------------------------------------------------------------------------
 set noerrorbells visualbell t_vb=
@@ -257,3 +270,4 @@ colorscheme peaksea
 if has("autocmd") 
   filetype plugin indent on 
 endif 
+
