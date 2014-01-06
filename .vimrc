@@ -180,6 +180,9 @@ set nocp
 " Une tabulation = 4 caractères
 " ----------------------------------------------------------------------------------------------------
 set ts=4
+set shiftwidth=4
+set expandtab
+set smartindent
 
 " Remplace le bip par un flash d'écran lors d'erreurs 
 " ----------------------------------------------------------------------------------------------------
