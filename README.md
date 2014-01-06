@@ -6,4 +6,4 @@ Installation
 Configuration
 =============
 In vim :
-    :BundleInstall
+   ` :BundleInstall `
