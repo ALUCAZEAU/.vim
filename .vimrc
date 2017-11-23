@@ -3,7 +3,7 @@
 " @file         .vimrc
 " @description  Fichier de configuration mini pour vim
 " @author       Alexandre LUCAZEAU
-" @version      09092013
+" @version      23112017
 "
 " ----------------------------------------------------------------------------------------------------
 "
@@ -181,6 +181,12 @@ set nocp
 " ----------------------------------------------------------------------------------------------------
 set ts=4
 
+" Place automatiquement un buffer modifié en mode caché lorsqu'on le quitte. Permet de passer d'un
+" buffer à l'autre même en cas de changements non enregistré - visible par un
+" h devant le nom du fichier lors de l'utilisation de la commande :ls
+" ----------------------------------------------------------------------------------------------------
+set hidden
+
 " indentation automatique
 " ----------------------------------------------------------------------------------------------------
 set smartindent
@@ -235,6 +241,13 @@ else
     return DIST
 endif
 endfunction
+
+""""""""""""""""""""""""""""""
+" ag au lieu de grep
+" ============================
+set grepprg=ag\ --vimgrep\ $*
+set grepformat=%f:%l:%c:%m
+
 """"""""""""""""""""""""""""""
 " => Statusline
 """"""""""""""""""""""""""""""
@@ -265,6 +278,14 @@ Bundle 'gmarik/vundle'
 Bundle 'peaksea'
 colorscheme peaksea
 
+Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+
+" Pour du markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+" Templates
+Plugin 'git://github.com/aperezdc/vim-template.git'
 " On active l'indentation automatique si les commandes automatiques sont activees
 " ----------------------------------------------------------------------------------------------------
 if has("autocmd") 
