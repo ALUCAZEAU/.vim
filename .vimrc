@@ -161,6 +161,20 @@ else
 	endif
 endif
 
+" Fichiers undo - active la persistence des undo et les sauvegardes dans le
+" repertoire ~/.vim/undofile
+" ----------------------------------------------------------------------------------------------------
+set undofile
+" sauvegarder les fichier undo dans ~/.vim/undofile avec création du répertoire si celui-ci n'existe pas
+if filewritable(expand("~/.vim/undofile")) == 2
+	set undodir=$HOME/.vim/undofile
+else
+	if has("unix") || has("win32unix")
+		call system("mkdir $HOME/.vim/undofile -p")
+		set undodir=$HOME/.vim/undofile
+	endif
+endif
+
 " Affiche ou non les espaces et tabulations
 " ----------------------------------------------------------------------------------------------------
 function! AfficheTab()
@@ -292,3 +306,5 @@ if has("autocmd")
   filetype plugin indent on 
 endif 
 
+
+au! BufNewFile,BufRead *.csv setf csv
