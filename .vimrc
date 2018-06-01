@@ -4,7 +4,7 @@
 " @description  Fichier de configuration mini pour vim
 " @author       Alexandre LUCAZEAU
 " @version      23112017
-"
+" A lire https://github.com/mhinz/vim-galore#undo-files
 " ----------------------------------------------------------------------------------------------------
 "
 " Syntax
@@ -20,6 +20,10 @@ syntax on
 " On desactive la detection automatique du type de fichier. On l'active plus tard. Necessaire pour assurer un chargement correcte de vundle
 " ----------------------------------------------------------------------------------------------------
 filetype off
+
+" Chiffrage du fichier en blowfish2 avec :X
+" =========================================
+set cm=blowfish2
 
 " Recherche
 " =========
@@ -70,6 +74,10 @@ set  cursorline
 " Affiche la parenthèse correspondante
 " ----------------------------------------------------------------------------------------------------
 set showmatch
+
+" % permet de naviguer de ( à ) ou de [ à ] ou { à } while done ou if ou ... - specifique vim 8
+" ----------------------------------------------------------------------------------------------------
+packadd! matchit
 
 " Affiche le numéro des lignes
 " ----------------------------------------------------------------------------------------------------
